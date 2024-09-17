@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  /*background: radial-gradient(
+    600px at 1306px 500px,
+    rgba(29, 78, 216, 0.15),
+    transparent 80%
+  );*/
+}
+
+.active .nav-indicator {
+  background-color: theme("colors.gray.100");
+}
+
+.active .nav-text {
+  color: theme("colors.gray.100");
+}
+
+.halo {
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  /*background: rgba(255, 255, 255, 0.5);*/
+  pointer-events: none; /* pour éviter les interactions avec l'élément */
+  filter: blur(80px);
+  mix-blend-mode: screen; /* rend l'effet plus doux */
+  transition: transform 0.1s ease-out;
+  opacity: 0.25;
+}
